@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端开发工程师</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .job-detail {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .job-detail h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .job-detail p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .buttons button.share {
+            background-color: #28a745;
+        }
+        .qr-code {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="job-detail">
+        <h1>前端开发工程师</h1>
+        <p>工作地点：北京</p>
+        <p>薪资：15-25K</p>
+        <h2>任职资格</h2>
+        <p>1. 本科及以上学历，计算机相关专业；</p>
+        <p>2. 3年以上前端开发经验；</p>
+        <h2>岗位要求</h2>
+        <p>1. 精通HTML、CSS、JavaScript；</p>
+        <p>2. 熟悉Vue.js或React框架；</p>
+        <div class="buttons">
+            <button class="share" onclick="shareJob()">分享</button>
+            <button onclick="showQRCode()">投递</button>
+        </div>
+        <div class="qr-code" id="qrCode">
+            <img src="wechat-qr.png" alt="微信二维码">
+            <p>扫码投递</p>
+        </div>
+    </div>
+
+    <script>
+        function showQRCode() {
+            document.getElementById('qrCode').style.display = 'block';
+        }
+
+        function shareJob() {
+            alert('请点击微信右上角按钮进行分享。');
+        }
+    </script>
+</body>
+</html>
